@@ -1,13 +1,12 @@
-package com.oswald.mascotas;
-
-import android.support.v7.widget.RecyclerView;
-import android.widget.Button;
+package com.oswald.mascotas.pojo;
 
 /**
  * Created by oswal on 23/12/2017.
  */
 
 public class Mascota implements java.io.Serializable {
+
+    private int id;
     private int imgFotoMascota;
     private int imgIconoLike;
     private String cvContadorLikes;
@@ -21,6 +20,10 @@ public class Mascota implements java.io.Serializable {
         this.cvContadorLikes   = cvContadorLikes;
         this.cvNombre          = cvNombre;
         this.cvIconoLike       = cvIconoLike;
+
+    }
+
+    public Mascota() {
 
     }
 
@@ -79,5 +82,13 @@ public class Mascota implements java.io.Serializable {
         int result = 11;
         result = result*33+this.cvNombre.hashCode();
         return result;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Mascotas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="nombre">Nombre</string>
+    <string name="correoContacto">Correp</string>
+    <string name="mensaje">Introduzca mensaje</string>
+    <string name="password">Contraseña</string>
+    <string name="aboutText">Acerca de...</string>
+    <string name="enviarComentario">Enviar Comentario</string>
+    <string name="dummyText">Lorem ipsum dolor sit amet, 
+                             consectetuer adipiscing elit. 
+                             Aenean commodo ligula eget dolor.
+                             Aenean massa. Cum sociis natoque
+                             penatibus et magnis dis parturient
+                             montes, nascetur ridiculus mus. 
+                             Donec quam felis, ultricies nec.</string>
+    <string name="ayudanteDeSanta">Ayudante de Santa</string>
+    <string name="corage">Corage el perro cobarde</string>
+    <string name="droopy">Droopy</string>
+    <string name="pluto">Pluto</string>
+    <string name="puffy_aplicacion">Puffy Aplicacion</string>
+    <string name="ren">Ren</string>
+    <string name="scooby_doo">Scooby-doo</string>
+    <string name="snoopy">Snoopy</string>
+    <string name="spike">Spike</string>
+
+
 </resources>
+

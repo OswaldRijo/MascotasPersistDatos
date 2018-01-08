@@ -6,7 +6,7 @@
     android:layout_height="?attr/actionBarSize"
     android:background="@color/colorPrimary"
     android:elevation="@dimen/elevacion"
-
+    app:title="@string/app_name"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
 
@@ -14,15 +14,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="5dp"
-            android:id="@+id/abFavoritos"
-
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cvContadorLikes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icons8_hotel_50"/>
+            android:layout_centerVertical="true"
+            android:text="Mascotas"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
     </RelativeLayout>
 
 

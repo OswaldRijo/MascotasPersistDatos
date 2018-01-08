@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutContacto"
+    tools:context="com.oswald.mascotas.SendingMail">
+
+    <include android:id="@+id/contactActionBar"
+        layout="@layout/actionbar"></include>
+
+    <LinearLayout
+        android:id="@+id/lNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/contactActionBar"
+        android:layout_marginTop="@dimen/topPadding">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons8_contacts_80"
+            />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/topPadding">
+            <EditText
+                android:layout_below="@id/contactActionBar"
+                android:id="@+id/tvNombre"
+                android:layout_marginTop="@dimen/topPadding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:hint="@string/nombre"
+                android:ems="15"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/tam_textView" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/lNombre"
+        android:layout_marginTop="@dimen/topPadding">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons8_gmail_80"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/topPadding">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCorreo"
+                android:layout_centerVertical="true"
+                android:hint="@string/correoContacto"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/tam_textView"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lCorreo">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:id="@+id/mensaje"
+        android:layout_centerVertical="true"
+        android:hint="@string/mensaje"
+        android:scrollbars="vertical"
+        android:lines="10"
+        android:gravity="top|left"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/tam_textView"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="@string/enviarComentario"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuContacto"
+        android:icon="@drawable/icons8_user_80"
+        android:title="@string/menu_contacto"
+        android:orderInCategory="1"
+
+        />
+    <!--app:showAsAction="ifRoom" -->
+    <item
+
+        android:id="@+id/menuAcercaDE"
+        android:icon="@drawable/icons8_about_80"
+        android:title="@string/menu_acerca_de"
+        android:orderInCategory="2"
+        />
+    <item android:id="@+id/menuFav"
+        android:icon="@drawable/icons8_hotel_80"
+        android:title="Favorito"
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom"/>
+</menu>
