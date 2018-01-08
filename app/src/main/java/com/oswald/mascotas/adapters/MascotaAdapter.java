@@ -1,23 +1,20 @@
-package com.oswald.mascotas;
+package com.oswald.mascotas.adapters;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.opengl.Visibility;
-import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+
+import com.oswald.mascotas.SendingMail;
+import com.oswald.mascotas.MainActivity;
+import com.oswald.mascotas.R;
+import com.oswald.mascotas.db.GeneradorContactos;
+import com.oswald.mascotas.pojo.Mascota;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by oswal on 24/12/2017.
@@ -64,41 +61,16 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
             mascotaViewHolder.imgIconoLike.setImageResource(mascota.getImgIconoLike());
             mascotaViewHolder.imgFotoMascota.setImageResource(mascota.getImgFotoMascota());
             mascotaViewHolder.cvNombre.setText(mascota.getCvNombre());
-        if (activity instanceof Favoritos){
-            mascotaViewHolder.imgIconoLike.setVisibility(View.GONE);
-        }else{
-            mascotaViewHolder.imgIconoLike.setVisibility(View.VISIBLE);
-        }
-        if(b){
-            mascotaViewHolder.cvContadorLikes.setVisibility(View.VISIBLE);
-            mascotaViewHolder.cvIconoLike.setVisibility(View.VISIBLE);
-        }
 
-        mascotaViewHolder.imgIconoLike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            mascotaViewHolder.imgIconoLike.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    GeneradorContactos generadorContactos = new GeneradorContactos(activity);
+                    generadorContactos.insertarLikes(mascota);
+                    mascotaViewHolder.cvContadorLikes.setText(String.valueOf(generadorContactos.obtenerLikes(mascota)));
 
-                int aux = 0;
-                aux = Integer.valueOf(mascota.getCvContadorLikes().toString());
-                aux++;
-                mascota.setCvContadorLikes(String.valueOf(aux));
-                mascotaViewHolder.cvContadorLikes.setText(String.valueOf(aux));
-                mascotaViewHolder.cvContadorLikes.setVisibility(View.VISIBLE);
-                mascotaViewHolder.cvIconoLike.setVisibility(View.VISIBLE);
-                if (activity instanceof MainActivity){
-
-                    if(mascotasFavoritas.contains(mascota)){
-                        mascotasFavoritas.remove(mascota);
-                    }
-                    mascotasFavoritas.add(mascota);
-                    if(mascotasFavoritas.size()>5){
-                       mascotasFavoritas.remove(0);
-                    }
                 }
-
-
-            }
-        });
+            });
 
     }
 
