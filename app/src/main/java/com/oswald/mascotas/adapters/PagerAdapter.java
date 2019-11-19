@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
- * Created by oswal on 31/12/2017.
+ * Created by oswald on 31/12/2017.
  */
 
 public class PagerAdapter extends FragmentPagerAdapter {

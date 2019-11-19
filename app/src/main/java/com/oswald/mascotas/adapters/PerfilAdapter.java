@@ -13,7 +13,7 @@ import com.oswald.mascotas.pojo.Mascota;
 import java.util.ArrayList;
 
 /**
- * Created by oswal on 31/12/2017.
+ * Created by oswald on 31/12/2017.
  */
 
 public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.PerfilViewHolder>{

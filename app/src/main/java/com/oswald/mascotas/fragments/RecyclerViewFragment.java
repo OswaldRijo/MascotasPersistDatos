@@ -45,12 +45,9 @@ public class RecyclerViewFragment extends Fragment implements IRecyclerViewFragm
 
     @Override
     public void generarLinearLayoutVertical() {
-
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         listaMascotas.setLayoutManager(llm);
-
     }
 
     @Override

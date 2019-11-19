@@ -57,8 +57,5 @@ public class PerfilFragment extends Fragment {
             mascotas.add(new Mascota(R.drawable.snoopy,"Snoopy",
                 String.valueOf(randomLike),R.drawable.icons8_dog_bone_50_1,R.drawable.icons8_dog_bone_80));
         }
-
-
     }
-
 }

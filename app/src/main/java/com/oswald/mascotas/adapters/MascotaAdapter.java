@@ -17,7 +17,7 @@ import com.oswald.mascotas.pojo.Mascota;
 import java.util.ArrayList;
 
 /**
- * Created by oswal on 24/12/2017.
+ * Created by oswald on 24/12/2017.
  */
 
 public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaViewHolder>{
